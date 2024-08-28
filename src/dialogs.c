@@ -80,6 +80,25 @@ struct UIItem diaNetConfig[] = {
     {UI_LABEL, 0, 1, 1, -1, 0, 0, {.label = {".", -1}}},
     {UI_INT, NETCFG_PS2_DNS_3, 1, 1, -1, 0, 0, {.intvalue = {1, 1, 0, 255}}},
     {UI_SPLITTER},
+    
+    // ----- NFS Server ----
+    {UI_LABEL, 0, 1, 1, -1, 0, 0, {.label = {NULL, _STR_NFS_SERVER}}},
+    {UI_SPACER},
+    {UI_STRING, NETCFG_NFS_SHARE_NAME, 1, 1, -1, 0, 0, {.stringvalue = }},
+    {UI_INT, NETCFG_NFS_IP_ADDR_0, 1, 1, -1, 0, 0, {.intvalue = {192, 192, 0, 255}}},
+    {UI_LABEL, NETCFG_NFS_IP_ADDR_DOT_0, 1, 1, -1, 0, 0, {.label = {".", -1}}},
+    {UI_INT, NETCFG_NFS_IP_ADDR_1, 1, 1, -1, 0, 0, {.intvalue = {168, 168, 0, 255}}},
+    {UI_LABEL, NETCFG_NFS_IP_ADDR_DOT_1, 1, 1, -1, 0, 0, {.label = {".", -1}}},
+    {UI_INT, NETCFG_NFS_IP_ADDR_2, 1, 1, -1, 0, 0, {.intvalue = {0, 0, 0, 255}}},
+    {UI_LABEL, NETCFG_NFS_IP_ADDR_DOT_2, 1, 1, -1, 0, 0, {.label = {".", -1}}},
+    {UI_INT, NETCFG_NFS_IP_ADDR_3, 1, 1, -1, 0, 0, {.intvalue = {1, 1, 0, 255}}},
+    {UI_BREAK},
+    
+    //  ---- NFS share name ----
+    {UI_LABEL, 0, 1, 1, -1, -40, 0, {.label = {NULL, _STR_SHARE}}},
+    {UI_SPACER},
+    {UI_STRING, NETCFG_SHARE_NAME, 1, 1, _STR_HINT_SHARENAME, 0, 0, {.stringvalue = {"PS2NFS", "PS2NFS", NULL}}},
+    {UI_BREAK},
 
     //  ---- SMB Server ----
     {UI_LABEL, 0, 1, 1, -1, 0, 0, {.label = {NULL, _STR_CAT_SMB_SERVER}}},
